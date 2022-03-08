@@ -24,7 +24,7 @@ namespace Get.Cli
             for (int i = 0; i < lines.Length; i++)
             {
                 var line = lines[i];
-                if (line.Contains(searchTxt))
+                if (line.Contains(searchTxt) && IsTitleLine(lines, i))
                 {
                     var result = new Result();
                     result.Title = line;
@@ -33,10 +33,11 @@ namespace Get.Cli
                     while (line.Trim() != "")
                     {
                         line = lines[++j];
-                        if (j == lines.Length - 1)
-                            break;
 
                         result.Body += line + "\n";
+
+                        if (j == lines.Length - 1)
+                            break;
                     }
                     i = j;
                     results.Add(result);
@@ -56,6 +57,11 @@ namespace Get.Cli
                 Console.WriteLine("-----");
                 Console.Write(result.Body);
             }
+        }
+
+        private bool IsTitleLine(string[] lines, int i)
+        {
+            return (i == 0 || lines[i - 1].Trim() == "");
         }
     }
 }
