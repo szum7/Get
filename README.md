@@ -1,4 +1,4 @@
-Useful commands:
+Setup:
 
 1. Edit the appsettings.json to your desired file location. (e.g.: "D:\\AllDocs\\testtxts\\test1.txt")
 2. (optional) Set the ```<ToolCommandName>``` in the .csproj to the desired call name. (e.g.: a.get)
