@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using System;
 
 namespace Get.Cli
 {
@@ -8,10 +9,8 @@ namespace Get.Cli
         {
             if (args.Length == 0)
             {
-                //Console.WriteLine("No args given, program exits.");
-                //return;
-
-                args = new string[1] { "test" };
+                Console.WriteLine("No args given, program exits.");
+                return;
             }
 
 
