@@ -24,7 +24,7 @@ namespace Get.Cli
             for (int i = 0; i < lines.Length; i++)
             {
                 var line = lines[i];
-                if (line.Contains(searchTxt) && IsTitleLine(lines, i))
+                if (line.ToLower().Contains(searchTxt.ToLower()) && IsTitleLine(lines, i))
                 {
                     var result = new Result();
                     result.Title = line;
