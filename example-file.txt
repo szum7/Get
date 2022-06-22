@@ -1,0 +1,18 @@
+domain.com
+myusername
+mypassword
+
+searchterm
+someinformation
+someinformation
+someinformation
+someinformation
+someinformation
+
+another section of information
+username: Tutu
+password: hello123
+
+Search is CaseINsensitive
+username
+password
